@@ -46,11 +46,24 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 }
 //обнуление браузерных стилей
-
+body {
+	background-color: $mainBG-color;
+}
 .App {
 	color: $main-text-color;
-	background: $mainBG-color;
+	width: 1400px;
+	margin-left: 32px;
+	margin-top: 32px;
 }
 h1 {
 	font-size: 1.75rem;
+	margin-bottom: 12px;
+}
+
+.main__container {
+	display: flex;
+
+	//align-items: flex-start;
+
+	justify-content: end;
 }

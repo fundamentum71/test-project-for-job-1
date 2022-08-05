@@ -9,9 +9,13 @@ function App() {
 				<h1>Добавление товара</h1>
 				<ProductSort />
 			</header>
-			<main className="container">
-				<ProductAdd />
-				<ProductList />
+			<main className="main__container">
+				<div>
+					<ProductAdd />
+				</div>
+				<div>
+					<ProductList />
+				</div>
 			</main>
 		</div>
 	);

@@ -1,8 +1,24 @@
 @import '../../style/variables.scss';
 
+.wrapper-productAdd {
+	display: block;
+
+	width: 332px;
+	min-height: 440px;
+
+	background-color: #fffefb;
+	box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04),
+		0px 6px 10px rgba(0, 0, 0, 0.02);
+	border-radius: 4px;
+	margin-right: 16px;
+}
 .productAdd {
-	margin: 24px;
-	background-color: #ffffff;
+	width: 284px;
+	display: block;
+	padding-top: 28px;
+	padding-bottom: 20px;
+
+	margin: 0 auto;
 	label {
 		font-size: 0.625rem;
 		margin-bottom: 4px;
@@ -26,8 +42,10 @@
 	::placeholder {
 		color: $placeholderText-color;
 	}
+
 	button {
-		background-color: $btn-disable-color;
+		background-color: $btn-enable-color;
+		color: #ffffff;
 		border-radius: 10px;
 		width: 284px;
 		height: 36px;
@@ -35,11 +53,12 @@
 		font-size: 0.75rem;
 		display: block;
 		margin-top: 24px;
-		border: none;
-	}
-	.btn_active {
-		background-color: $btn-enable-color;
-		color: #ffffff;
 		cursor: pointer;
+		border: none;
+		&:disabled {
+			background-color: $btn-disable-color;
+			color: $btn-disable-text-color;
+			cursor: default;
+		}
 	}
 }
