@@ -55,6 +55,9 @@
 		margin-top: 24px;
 		cursor: pointer;
 		border: none;
+		&:active {
+			transform: scale(1.05);
+		}
 		&:disabled {
 			background-color: $btn-disable-color;
 			color: $btn-disable-text-color;

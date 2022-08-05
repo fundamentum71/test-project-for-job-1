@@ -51,7 +51,8 @@ body {
 }
 .App {
 	color: $main-text-color;
-	width: 1400px;
+	max-width: 1460px;
+	padding: 0 32px;
 	margin: 32px auto;
 }
 h1 {

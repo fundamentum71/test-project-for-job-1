@@ -15,6 +15,9 @@ const ProductListItem = () => {
 					Довольно-таки интересное описание товара в несколько строк
 				</div>
 				<div className="item__price">10 000 руб.</div>
+				<button className="item__delete">
+					<img src={trash} alt="trash" />
+				</button>
 			</div>
 		</li>
 	);
