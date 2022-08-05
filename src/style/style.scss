@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Source+Sans+Pro:wght@400;600&display=swap');
+@import './variables';
 
 * {
 	font-family: 'Source Sans Pro';
@@ -46,8 +47,10 @@ input::-webkit-inner-spin-button {
 }
 //обнуление браузерных стилей
 
-@import './variables';
-
+.App {
+	color: $main-text-color;
+	background: $mainBG-color;
+}
 h1 {
 	font-size: 1.75rem;
 }

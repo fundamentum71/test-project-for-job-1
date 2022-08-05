@@ -1,9 +1,45 @@
 @import '../../style/variables.scss';
+
 .productAdd {
+	margin: 24px;
+	background-color: #ffffff;
 	label {
 		font-size: 0.625rem;
+		margin-bottom: 4px;
 	}
-	input {
+	input,
+	textarea {
+		font-size: 0.75rem;
+		padding: 10px 16px;
+		margin-bottom: 16px;
 		display: block;
+		border-radius: 4px;
+		border: none;
+		width: 284px;
+		height: 36px;
+		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+	}
+	#productDescr {
+		height: 125px;
+		resize: none;
+	}
+	::placeholder {
+		color: $placeholderText-color;
+	}
+	button {
+		background-color: $btn-disable-color;
+		border-radius: 10px;
+		width: 284px;
+		height: 36px;
+		font-family: 'inter';
+		font-size: 0.75rem;
+		display: block;
+		margin-top: 24px;
+		border: none;
+	}
+	.btn_active {
+		background-color: $btn-enable-color;
+		color: #ffffff;
+		cursor: pointer;
 	}
 }

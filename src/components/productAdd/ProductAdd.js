@@ -12,11 +12,11 @@ const ProductAdd = () => {
 			/>
 
 			<label htmlFor="#productDescr">Описание товара</label>
-			<input
+			<textarea
 				id="productDescr"
 				type="text"
 				placeholder="Введите описание товара"
-			/>
+			></textarea>
 
 			<label htmlFor="#productURL">Ссылка на изображение товара</label>
 			<input id="productURL" type="text" placeholder="Введите ссылку" />
@@ -24,7 +24,9 @@ const ProductAdd = () => {
 			<label htmlFor="#productPrice">Цена товара</label>
 			<input id="productPrice" type="number" placeholder="Введите цену" />
 
-			<button type="submit">Добавить товар</button>
+			<button type="submit" className="btn_active">
+				Добавить товар
+			</button>
 		</form>
 	);
 };
