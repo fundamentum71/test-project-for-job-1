@@ -1,8 +1,7 @@
-@import './variables';
-@import './button';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Source+Sans+Pro:wght@400;600&display=swap');
 
 * {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Source Sans Pro';
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -46,3 +45,10 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 }
 //обнуление браузерных стилей
+
+@import './variables';
+@import './button';
+
+h1 {
+	font-size: 1.75rem;
+}
