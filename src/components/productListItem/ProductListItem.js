@@ -2,20 +2,17 @@ import './productListItem.scss';
 import trash from '../../resources/img/trash.svg';
 import example from '../../resources/img/example.png';
 
-const ProductListItem = () => {
+const ProductListItem = ({ title, desc, ref, price, onDelete }) => {
 	return (
 		<li className="product__list-item">
 			<div className="item__img">
 				<img src={example} alt="product" />
 			</div>
 			<div className="item__wrapper">
-				<h2 className="item__title">Наименование товара</h2>
-				<div className="item__descr">
-					Довольно-таки интересное описание товара в несколько строк.
-					Довольно-таки интересное описание товара в несколько строк
-				</div>
-				<div className="item__price">10 000 руб.</div>
-				<button className="item__delete">
+				<h2 className="item__title">{title}</h2>
+				<div className="item__descr">{desc}</div>
+				<div className="item__price">{price} руб.</div>
+				<button className="item__delete" onClick={onDelete}>
 					<img src={trash} alt="trash" />
 				</button>
 			</div>
