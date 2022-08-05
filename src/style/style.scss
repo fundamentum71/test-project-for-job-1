@@ -52,8 +52,7 @@ body {
 .App {
 	color: $main-text-color;
 	width: 1400px;
-	margin-left: 32px;
-	margin-top: 32px;
+	margin: 32px auto;
 }
 h1 {
 	font-size: 1.75rem;
@@ -62,8 +61,4 @@ h1 {
 
 .main__container {
 	display: flex;
-
-	//align-items: flex-start;
-
-	justify-content: end;
 }
