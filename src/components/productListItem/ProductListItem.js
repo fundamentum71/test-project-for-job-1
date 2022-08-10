@@ -1,6 +1,5 @@
 import './productListItem.scss';
 import trash from '../../resources/img/trash.svg';
-import example from '../../resources/img/example.png';
 
 const ProductListItem = ({ title, desc, link, price, onDelete }) => {
 	return (

@@ -1,17 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './productAdd.scss';
 
 const ProductAdd = (props) => {
-	//constructor(props) {
-	//	super(props);
-	//	this.state = {
-	//		title: '',
-	//		desc: '',
-	//		link: '',
-	//		price: '',
-	//	};
-	//}
-
 	const [title, setTitle] = useState('');
 	const [desc, setDesc] = useState('');
 	const [link, setLink] = useState('');
@@ -31,6 +21,8 @@ const ProductAdd = (props) => {
 			case 'price':
 				setPrice(e.target.value);
 				break;
+			default:
+				console.log(new Error());
 		}
 	};
 
@@ -49,7 +41,6 @@ const ProductAdd = (props) => {
 		}
 	};
 
-	//const { title, desc, link, price } = this.state;
 	return (
 		<div className="wrapper-productAdd">
 			<form action="#" className="productAdd" onSubmit={onSubmit}>
