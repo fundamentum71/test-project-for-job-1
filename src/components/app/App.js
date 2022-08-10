@@ -42,6 +42,22 @@ class App extends Component {
 		});
 	};
 
+	addItem = (title, desc, link, price) => {
+		const newItem = {
+			title,
+			desc,
+			link,
+			price,
+			id: this.maxId,
+		};
+		this.setState(({ data }) => {
+			const newArr = [...data, newItem];
+			return {
+				data: newArr,
+			};
+		});
+	};
+
 	render() {
 		const { data } = this.state;
 		return (
@@ -52,7 +68,7 @@ class App extends Component {
 				</header>
 				<main className="main__container">
 					<div>
-						<ProductAdd />
+						<ProductAdd onAdd={this.addItem} />
 					</div>
 					<div>
 						<ProductList data={data} onDelete={this.deleteItem} />
