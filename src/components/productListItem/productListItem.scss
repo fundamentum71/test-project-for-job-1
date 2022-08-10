@@ -10,11 +10,13 @@
 		0px 6px 10px rgba(0, 0, 0, 0.02);
 	border-radius: 4px;
 	position: relative;
+	transition: all 0.6s;
 
 	&:hover {
 		.item__delete {
 			display: block;
 		}
+		transform: scale(1.05);
 	}
 }
 .item {
