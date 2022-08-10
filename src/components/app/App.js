@@ -7,31 +7,9 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			data: [
-				{
-					id: 1,
-					title: 'Телевизор',
-					desc: 'Прикольный телевизор',
-					link: 'https://www.lg.com/ru/images/televisions/md07528692/gallery/Medium_01.jpg',
-					price: 14000,
-				},
-				{
-					id: 2,
-					title: 'Кампуктер',
-					desc: 'Прикольный телевизор',
-					link: 'https://klike.net/uploads/posts/2020-03/1583572878_2.jpg',
-					price: 84000,
-				},
-				{
-					id: 3,
-					title: 'микроволновка',
-					desc: 'Прикольный телевизор',
-					link: 'https://bq.ru/upload/iblock/b6a/front.jpg',
-					price: 4000,
-				},
-			],
+			data: [],
 		};
-		this.maxId = 4;
+		this.maxId = 0;
 	}
 
 	deleteItem = (id) => {
@@ -48,7 +26,7 @@ class App extends Component {
 			desc,
 			link,
 			price,
-			id: this.maxId,
+			id: this.maxId++,
 		};
 		this.setState(({ data }) => {
 			const newArr = [...data, newItem];
@@ -57,6 +35,28 @@ class App extends Component {
 			};
 		});
 	};
+
+	onSaveLocal = () => {
+		localStorage.setItem('saveProduct', JSON.stringify(this.state.data));
+		localStorage.setItem('idProduct', JSON.stringify(this.maxId));
+	};
+
+	onGetLocal = () => {
+		this.setState({ data: JSON.parse(localStorage.getItem('saveProduct')) });
+		this.maxId = JSON.parse(localStorage.getItem('idProduct'));
+	};
+
+	componentDidMount() {
+		if (
+			localStorage.getItem('saveProduct') !== null &&
+			localStorage.getItem('idProduct') !== null
+		) {
+			this.onGetLocal();
+		}
+	}
+	componentDidUpdate() {
+		this.onSaveLocal();
+	}
 
 	render() {
 		const { data } = this.state;
