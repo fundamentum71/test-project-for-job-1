@@ -64,6 +64,9 @@
 			background-color: $btn-disable-color;
 			color: $btn-disable-text-color;
 			cursor: default;
+			&:active {
+				transform: none;
+			}
 		}
 	}
 

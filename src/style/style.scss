@@ -63,3 +63,9 @@ h1 {
 .main__container {
 	display: flex;
 }
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	margin-right: 20px;
+}

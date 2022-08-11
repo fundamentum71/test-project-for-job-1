@@ -1,11 +1,12 @@
 import './productListItem.scss';
 import trash from '../../resources/img/trash.svg';
+//import noImage from '../../resources/img/noimage.jpg';
 
 const ProductListItem = ({ title, desc, link, price, onDelete }) => {
 	return (
 		<li className="product__list-item">
 			<div className="item__img">
-				<img src={link} alt="product" />
+				<img src={link} alt="Изображение отсутствует" />
 			</div>
 			<div className="item__wrapper">
 				<h2 className="item__title">{title}</h2>

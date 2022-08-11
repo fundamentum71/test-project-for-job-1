@@ -120,7 +120,7 @@ const ProductAdd = (props) => {
 	return (
 		<div className="wrapper-productAdd">
 			<form action="#" className="productAdd" onSubmit={onSubmit}>
-				<label htmlFor="#productTitle" className="red-circle">
+				<label htmlFor="productTitle" className="red-circle">
 					Наименование товара
 				</label>
 				{titleDirty && titleError && (
@@ -140,7 +140,7 @@ const ProductAdd = (props) => {
 					placeholder="Введите наименование товара"
 				/>
 
-				<label htmlFor="#productDescr">Описание товара</label>
+				<label htmlFor="productDescr">Описание товара</label>
 				{descDirty && descError && (
 					<div
 						style={{ color: 'red', fontSize: '0.625rem', marginBottom: '10px' }}
@@ -158,7 +158,7 @@ const ProductAdd = (props) => {
 					placeholder="Введите описание товара"
 				></textarea>
 
-				<label htmlFor="#productURL" className="red-circle">
+				<label htmlFor="productURL" className="red-circle">
 					Ссылка на изображение товара
 				</label>
 				{linkDirty && linkError && (
@@ -178,7 +178,7 @@ const ProductAdd = (props) => {
 					onBlur={(e) => blurHandler(e)}
 				/>
 
-				<label htmlFor="#productPrice" className="red-circle">
+				<label htmlFor="productPrice" className="red-circle">
 					Цена товара
 				</label>
 				{priceDirty && priceError && (

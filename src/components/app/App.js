@@ -49,7 +49,7 @@ const App = () => {
 
 	return (
 		<div className="App">
-			<header>
+			<header className="header__container">
 				<h1>Добавление товара</h1>
 				<ProductSort />
 			</header>
