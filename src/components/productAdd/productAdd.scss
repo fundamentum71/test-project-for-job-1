@@ -20,8 +20,10 @@
 
 	margin: 0 auto;
 	label {
+		display: inline-block;
 		font-size: 0.625rem;
 		margin-bottom: 4px;
+		//position: relative;
 	}
 	input,
 	textarea {
@@ -62,6 +64,18 @@
 			background-color: $btn-disable-color;
 			color: $btn-disable-text-color;
 			cursor: default;
+		}
+	}
+
+	label.red-circle {
+		&::after {
+			content: '';
+			display: inline-block;
+			border-radius: 50%;
+			width: 4px;
+			height: 4px;
+			background-color: $error-validated-color;
+			position: absolute;
 		}
 	}
 }
