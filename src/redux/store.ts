@@ -8,9 +8,4 @@ export const store = configureStore({
 	},
 });
 
-////будет хранить тип стейтов
 export type RootState = ReturnType<typeof store.getState>;
-
-////тип для диспатча
-//type AppDispatch = typeof store.dispatch;
-//export const useAppDispatch = () => useDispatch<AppDispatch>();

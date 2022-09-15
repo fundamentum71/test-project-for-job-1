@@ -5,11 +5,15 @@ import './productAdd.scss';
 
 const ProductAdd: React.FC = () => {
 	const dispatch = useDispatch();
-	//const [value, setValue] = React.useState('');
 
-	const onClickButtonAdd = () => {
-		dispatch(addItem());
-	};
+	const [title, setTitle] = React.useState('');
+	const [desc, setDesc] = React.useState('');
+	const [imageUrl, setImgUrl] = React.useState('');
+	const [price, setPrice] = React.useState(0);
+
+	//const onClickButtonAdd = () => {
+	//	dispatch(addItem(title, desc, imageUrl, price));
+	//};
 
 	return (
 		<div className="wrapper-productAdd">
@@ -19,24 +23,41 @@ const ProductAdd: React.FC = () => {
 				</label>
 				<input
 					id="productTitle"
-					name="title"
 					type="text"
 					placeholder="Введите наименование товара"
+					name="title"
+					value={title}
 				/>
 
 				<label htmlFor="productDescr">Описание товара</label>
-				<textarea name="desc" id="productDescr" placeholder="Введите описание товара"></textarea>
+				<textarea
+					id="productDescr"
+					placeholder="Введите описание товара"
+					name="desc"
+					value={desc}></textarea>
 
 				<label htmlFor="productURL" className="red-circle">
 					Ссылка на изображение товара
 				</label>
-				<input id="productURL" type="text" placeholder="Введите ссылку" name="link" />
+				<input
+					id="productURL"
+					type="text"
+					placeholder="Введите ссылку"
+					name="imageUrl"
+					value={imageUrl}
+				/>
 
 				<label htmlFor="productPrice" className="red-circle">
 					Цена товара
 				</label>
 
-				<input id="productPrice" type="number" placeholder="Введите цену" name="price" />
+				<input
+					id="productPrice"
+					type="number"
+					placeholder="Введите цену"
+					name="price"
+					value={price}
+				/>
 				<button type="submit">Добавить товар</button>
 			</form>
 		</div>
