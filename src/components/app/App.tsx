@@ -7,7 +7,7 @@ const App: React.FC = () => {
 		<div className="App">
 			<header className="header__container">
 				<h1>Добавление товара</h1>
-				{/*<ProductSort />*/}
+				<ProductSort />
 			</header>
 			<main className="main__container">
 				<div>

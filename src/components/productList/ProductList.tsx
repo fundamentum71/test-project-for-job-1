@@ -9,7 +9,7 @@ const ProductList: React.FC = () => {
 	//	);
 	//});
 
-	return <ul className="product__list">ЫЗК</ul>;
+	return <ul className="product__list">{/*{element}*/}</ul>;
 };
 
 export default ProductList;

@@ -1,6 +1,16 @@
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../redux/cart/slice';
 import './productAdd.scss';
 
 const ProductAdd: React.FC = () => {
+	const dispatch = useDispatch();
+	//const [value, setValue] = React.useState('');
+
+	const onClickButtonAdd = () => {
+		dispatch(addItem());
+	};
+
 	return (
 		<div className="wrapper-productAdd">
 			<form action="#" className="productAdd">
