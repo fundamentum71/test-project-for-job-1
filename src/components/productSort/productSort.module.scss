@@ -1,0 +1,30 @@
+@import '../../style/variables.scss';
+.sort {
+	cursor: pointer;
+	position: relative;
+
+	&__wrapper {
+		position: absolute;
+		padding: 5px;
+		width: 150px;
+		right: 1px;
+		z-index: 2;
+		color: $main-text-color;
+		background-color: $btn-disable-text-color;
+		border-radius: 7px;
+	}
+
+	&__label {
+		text-align: center;
+	}
+	&__popup {
+		&_item {
+			margin: 5px;
+			padding: 4px;
+			&:hover {
+				background-color: $mainBG-color;
+				border-radius: 7px;
+			}
+		}
+	}
+}
