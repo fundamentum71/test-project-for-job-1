@@ -5,6 +5,6 @@ export const getCartFromLS = () => {
 	const items = data ? JSON.parse(data) : [];
 
 	return {
-		items: items as CartItem[],
+		list: items as CartItem[],
 	};
 };

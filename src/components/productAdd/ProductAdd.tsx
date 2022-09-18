@@ -11,18 +11,20 @@ const ProductAdd: React.FC = () => {
 	const [price, setPrice] = React.useState('');
 	const dispatch = useAppDispatch();
 
-	const handleAction = () => {
-		dispatch(addItem({ title, desc, imageUrl, price }));
-		setTitle('');
-		setDesc('');
-		setImgUrl('');
-		setPrice('');
-	};
+	let validForm: boolean = false;
+	if (title.trim().length && desc.trim().length && imageUrl.trim().length && price.trim().length) {
+		validForm = true;
+	}
 
-	console.log(title);
-	console.log(desc);
-	console.log(imageUrl);
-	console.log(price);
+	const handleAction = () => {
+		if (validForm) {
+			dispatch(addItem({ title, desc, imageUrl, price }));
+			setTitle('');
+			setDesc('');
+			setImgUrl('');
+			setPrice('');
+		}
+	};
 
 	return (
 		<div className="wrapper-productAdd">
@@ -71,7 +73,9 @@ const ProductAdd: React.FC = () => {
 					value={price}
 					onChange={(e) => setPrice(e.target.value)}
 				/>
-				<button onClick={() => handleAction()}>Добавить товар</button>
+				<button disabled={!validForm} onClick={() => handleAction()}>
+					Добавить товар
+				</button>
 			</div>
 		</div>
 	);
