@@ -2,10 +2,17 @@ export type CartItem = {
 	id: string;
 	title: string;
 	desc: string;
-	price: number;
+	price: string;
 	imageUrl: string;
 };
 
-export interface CartSliceState {
-	cart: CartItem[];
+export type CartItemADD = {
+	title: string;
+	desc: string;
+	price: string;
+	imageUrl: string;
+};
+
+export interface CartListState {
+	list: CartItem[];
 }
