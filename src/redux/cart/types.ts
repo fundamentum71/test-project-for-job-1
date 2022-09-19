@@ -4,6 +4,7 @@ export type CartItem = {
 	desc: string;
 	price: string;
 	imageUrl: string;
+	important: boolean;
 };
 
 export type CartItemADD = {

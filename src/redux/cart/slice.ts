@@ -16,6 +16,7 @@ const cartSlice = createSlice({
 				desc: action.payload.desc,
 				imageUrl: action.payload.imageUrl,
 				price: action.payload.price,
+				important: false,
 			});
 		},
 		clearItems(state, actions: PayloadAction<string>) {
@@ -27,9 +28,13 @@ const cartSlice = createSlice({
 			let summaryPrice = summaryPriceArray.reduce((sum, current) => sum + current);
 			state.sum = summaryPrice;
 		},
+		changeImportant(state, actions: PayloadAction<string>) {
+			let changeItem = state.list.filter((items) => items.id == actions.payload);
+			changeItem.map((item) => (item.important = !item.important));
+		},
 	},
 });
 
-export const { addItem, clearItems, sumPrice } = cartSlice.actions;
+export const { addItem, clearItems, sumPrice, changeImportant } = cartSlice.actions;
 
 export default cartSlice.reducer;
