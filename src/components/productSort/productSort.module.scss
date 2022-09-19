@@ -2,6 +2,9 @@
 .sort {
 	cursor: pointer;
 	position: relative;
+	@media (max-width: 500px) {
+		position: static;
+	}
 
 	&__wrapper {
 		position: absolute;
@@ -12,6 +15,10 @@
 		color: $main-text-color;
 		background-color: $btn-disable-text-color;
 		border-radius: 7px;
+		@media (max-width: 500px) {
+			left: 1px;
+			top: 550px;
+		}
 	}
 
 	&__label {

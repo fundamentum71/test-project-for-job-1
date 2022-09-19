@@ -6,12 +6,15 @@
 	background-color: #ffffff;
 	margin-bottom: 16px;
 	margin-right: 16px;
-	box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04),
-		0px 6px 10px rgba(0, 0, 0, 0.02);
+	box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
 	border-radius: 4px;
 	position: relative;
 	transition: all 0.6s;
 	cursor: pointer;
+
+	@media (max-width: 500px) {
+		margin-right: 0;
+	}
 
 	&:hover {
 		.item__delete {
