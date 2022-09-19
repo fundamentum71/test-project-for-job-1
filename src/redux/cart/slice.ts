@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, current, PayloadAction } from '@reduxjs/toolkit';
 import { getCartFromLS } from '../../utils/getCartFromLS';
 
 import { CartListState, CartItemADD } from './types';
@@ -21,9 +21,15 @@ const cartSlice = createSlice({
 		clearItems(state, actions: PayloadAction<string>) {
 			state.list = state.list.filter((item) => item.id !== actions.payload);
 		},
+		sumPrice(state) {
+			let summaryPriceArray: number[] = [];
+			state.list.forEach((items) => summaryPriceArray.push(parseFloat(items.price)));
+			let summaryPrice = summaryPriceArray.reduce((sum, current) => sum + current);
+			state.sum = summaryPrice;
+		},
 	},
 });
 
-export const { addItem, clearItems } = cartSlice.actions;
+export const { addItem, clearItems, sumPrice } = cartSlice.actions;
 
 export default cartSlice.reducer;
