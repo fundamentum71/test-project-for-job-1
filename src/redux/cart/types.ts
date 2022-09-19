@@ -15,4 +15,5 @@ export type CartItemADD = {
 
 export interface CartListState {
 	list: CartItem[];
+	sum: number;
 }

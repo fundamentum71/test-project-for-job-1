@@ -6,5 +6,6 @@ export const getCartFromLS = () => {
 
 	return {
 		list: items as CartItem[],
+		sum: 0,
 	};
 };
